@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
   return (
     <div className=" h-full">
-      <div className="flex text-xs  h-full  items-center justify-between p-24">
+      <div className="flex text-xs  h-full  items-center justify-between p-6 md:p-24">
         <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-green-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#01c321] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]" />
 
         <div className=" flex-1">
@@ -62,7 +62,7 @@ export default function Home() {
           }}
         />
         <div
-          className="pointer-events-none absolute  left-1/2 -top-1 w-full h-[400px] max-w-[200px] md:max-w-[400px] -translate-x-1/2 -translate-y-1/2"
+          className="pointer-events-none absolute   left-1/2 -top-1 w-full h-[400px] max-w-[200px] md:max-w-[400px] -translate-x-1/2 -translate-y-1/2"
           style={{
             background:
               "conic-gradient(from 90deg at 50% 50%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 50%), radial-gradient(rgba(200, 200, 200, 0.1) 0%, transparent 80%)",
