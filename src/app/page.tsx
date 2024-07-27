@@ -33,7 +33,7 @@ export default function Home() {
               Build your ReadMe file with{" "}
               <span className=" italic text-green-400">SUPERPOWER</span>
             </p>
-            <div className="  font-goatproduct text-xs flex text-gray-300 items-center space-x-3">
+            <div className="  text-xs flex text-gray-300 items-center space-x-3">
               <p>YOUR</p>{" "}
               <span className=" text-lg">
                 <FaGithub />
