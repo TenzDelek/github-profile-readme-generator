@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import Template from "@/components/pages/Template";
 import Githubrep from "@/components/pages/Githubrep";
-
+import { Link } from "react-scroll";
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -43,22 +43,31 @@ export default function Home() {
               </span>
               <p> PROFILE NEED SOME DESIGN</p>
             </div>
-
-            <button className=" bg-[#182A2A] text-[#cbcbcb] hover:text-black p-2 rounded-sm font-semibold  hover:bg-gray-200 group flex items-center gap-2 transition">
-              Template{" "}
-              <span className="relative overflow-hidden h-fit w-fit">
-                <GoArrowUpRight className="group-hover:-translate-y-5 group-hover:translate-x-5 duration-500 transition-transform ease-in-out-circ fill-light-gray stroke-[0.2]" />
-                <GoArrowUpRight className="absolute top-0 group-hover:translate-x-0 duration-500 group-hover:translate-y-0 transition-all ease-in-out-circ translate-y-5 -translate-x-5 fill-light-gray stroke-[0.2]" />
-              </span>
-            </button>
+            <div>
+              <Link
+                smooth
+                duration={500}
+                to="template"
+                className=" cursor-pointer"
+              >
+                <button className=" bg-[#182A2A] text-[#cbcbcb] hover:text-black p-2 rounded-sm font-semibold  hover:bg-gray-200 group flex items-center gap-2 transition">
+                  Template{" "}
+                  <span className="relative overflow-hidden h-fit w-fit">
+                    <GoArrowUpRight className="group-hover:-translate-y-5 group-hover:translate-x-5 duration-500 transition-transform ease-in-out-circ fill-light-gray stroke-[0.2]" />
+                    <GoArrowUpRight className="absolute top-0 group-hover:translate-x-0 duration-500 group-hover:translate-y-0 transition-all ease-in-out-circ translate-y-5 -translate-x-5 fill-light-gray stroke-[0.2]" />
+                  </span>
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
         <div className=" md:block hidden flex-1 h-full w-full bg-[#0a0a0a] rounded-lg z-20">
           <Githubrep />
         </div>
       </div>
-
-      <Template />
+      <div id="template">
+        <Template />
+      </div>
     </div>
   );
 }

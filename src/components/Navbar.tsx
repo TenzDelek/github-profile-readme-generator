@@ -24,18 +24,22 @@ const Navbar = () => {
 
       <div className=" flex gap-2 items-center">
         <Link
-          className=" text-lg cursor-pointer"
+          className=" flex items-center gap-2 cursor-pointer"
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/TenzDelek/github-profile-readme-generator"
         >
-          <FaGithub />
+          Give us a Star <FaGithub className=" text-lg" />
         </Link>
         <SignedOut>
-          <SignInButton />
+          <div className=" border p-2 rounded hover:bg-white transition hover:text-black">
+            <SignInButton />
+          </div>
         </SignedOut>
         <SignedIn>
-          <SignOutButton />
+          <div className=" border p-2 rounded hover:bg-white transition hover:text-black">
+            <SignOutButton />
+          </div>
         </SignedIn>
       </div>
     </div>
