@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 const Navbar = () => {
@@ -13,9 +14,16 @@ const Navbar = () => {
         </div>
       </div>
       <div className="hidden md:block">Home</div>
-      <div className=" text-lg">
-        <FaGithub />
-      </div>
+      <Link
+        className=" text-lg cursor-pointer"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/TenzDelek/github-profile-readme-generator"
+      >
+        <div>
+          <FaGithub />
+        </div>
+      </Link>
     </div>
   );
 };
