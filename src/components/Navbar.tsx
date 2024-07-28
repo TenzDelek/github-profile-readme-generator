@@ -1,3 +1,10 @@
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignOutButton,
+  UserButton,
+} from "@clerk/nextjs";
 import Link from "next/link";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
@@ -14,16 +21,23 @@ const Navbar = () => {
         </div>
       </div>
       <div className="hidden md:block">Home</div>
-      <Link
-        className=" text-lg cursor-pointer"
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/TenzDelek/github-profile-readme-generator"
-      >
-        <div>
+
+      <div className=" flex gap-2 items-center">
+        <Link
+          className=" text-lg cursor-pointer"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/TenzDelek/github-profile-readme-generator"
+        >
           <FaGithub />
-        </div>
-      </Link>
+        </Link>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <SignOutButton />
+        </SignedIn>
+      </div>
     </div>
   );
 };
