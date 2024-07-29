@@ -20,7 +20,6 @@ const Navbar = () => {
           </span>
         </div>
       </div>
-      <div className="hidden md:block">Home</div>
 
       <div className=" flex gap-2 items-center">
         <Link

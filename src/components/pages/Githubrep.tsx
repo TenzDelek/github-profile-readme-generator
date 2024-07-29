@@ -74,11 +74,18 @@ const Githubrep = () => {
           <pre>README.MD</pre>
           <Link smooth duration={500} to="template" className=" cursor-pointer">
             <div className=" flex flex-col space-y-2 items-center justify-center w-full h-full">
-              <PiPaintBrushBroadDuotone className=" hover:text-yellow-300 transition p-2 border text-4xl rounded-full" />
+              <PiPaintBrushBroadDuotone className=" animate-pulse hover:text-yellow-300 transition p-2 border text-4xl rounded-full" />
               <p>Bless me</p>
             </div>
           </Link>
         </div>
+      </div>
+      <div className=" w-full text-base text-gray-600 flex items-center justify-center py-14">
+        &quot; We judge the book by its{" "}
+        <span className=" mx-2 font-bold line-through"> Cover</span>{" "}
+        <span className=" italic font-semibold text-green-500">
+          ReadMe File&quot;
+        </span>
       </div>
     </div>
   );
